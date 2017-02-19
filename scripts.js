@@ -1,35 +1,20 @@
 function doResize() {
 	var w = $("body").width();
 	var src = "images/w400/";
+	var sep_h = "27px";
 	
-	$(".image2").css({
-		"width" : "100%",
-		"float" : "none"
-	});
-	
-	if (w <= 500) {
-		src = "images/w400/";
-		$(".separator").css({
-			"height" : "14px",
-			"background-image" : "url('"+src+"separator.png')"
-		});
-	} else if (w <= 1000) {
+	if (w > 500 && w <= 1000) {
 		src = "images/w800/";
-		$(".separator").css({
-			"height" : "28px",
-			"background-image" : "url('"+src+"separator.png')"
-		});
-	} else {
+		sep_h = "53px";
+	} else if (w > 1000) {
 		src = "images/w1280/";
-		$(".separator").css({
-			"height" : "44px",
-			"background-image" : "url('"+src+"separator.png')"
-		});
-		$(".image2").css({
-			"width" : "50%",
-			"float" : "left"
-		});
+		sep_h = "84px";
 	}
+	
+	$(".separator").css({
+		"height" : sep_h,
+		"background-image" : "url('" + src + "separator.png')"
+	});
 	
 	$("img").each(function( index ) {
 		$( this ).attr("src", src + $( this ).attr('id') + ".png");
