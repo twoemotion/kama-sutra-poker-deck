@@ -6,6 +6,7 @@ body {
 }
 .content {
 	width: 80%;
+	max-width: 800px;
 	margin: 0 auto;
 }
 
@@ -24,8 +25,7 @@ h1.header img {
 .separator {
 	width: 100%;
 	height: 27px;
-    background-image: url("images/w400/separator.png");
-    background-repeat: repeat-x;
+    	background-image: url("images/w400/separator.png");
 	background-position: center;
 }
 
