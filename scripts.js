@@ -3,12 +3,9 @@ function doResize() {
 	var src = "images/w400/";
 	var sep_h = "27px";
 	
-	if (w > 500 && w <= 1000) {
+	if (w > 500) {
 		src = "images/w800/";
 		sep_h = "53px";
-	} else if (w > 1000) {
-		src = "images/w1280/";
-		sep_h = "84px";
 	}
 	
 	$(".separator").css({
